@@ -13,8 +13,14 @@ export class App {
   surveyService = inject(SurveyService);
 
   surveys: any[] = [];
+  questions: any[] = [];
+  votes: any[] = [];
+  answerOptions: any[] = [];
 
   async ngOnInit() {
-    this.surveys = (await this.surveyService.getAllData()) ?? [];
+    this.surveys = await this.surveyService.getAllSurvaysData();
+    this.questions = await this.surveyService.getAllQuestionsData();
+    this.votes = await this.surveyService.getAllVotesData();
+    this.answerOptions = await this.surveyService.getAllAnswerOptionData();
   }
 }
