@@ -1,0 +1,39 @@
+<div class="create-survey">
+  <header>
+    <h1>Create new survey</h1>
+    <button type="button">Cancel X</button>
+  </header>
+  <main>
+    <form action="">
+      <section class="create-survey__details">
+        <div class="form-field">
+          <label for="survey-title">Survey name</label>
+          <input type="text" id="survey-title" required />
+        </div>
+
+        <div class="form-field">
+          <label for="endDate">Set end date (optional)</label>
+          <input type="text" id="endDate" type="date" />
+        </div>
+
+        <div class="form-field">
+          <label for="survey-category">Set end date (optional)</label>
+          <select name="category" id="survey-category">
+            <option value="">Select category</option>
+            <option value="work">Work</option>
+            <option value="sports">Sports</option>
+            <option value="gaming">Gaming</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="questions">Questions</label>
+          <input type="text" id="questions" placeholder="Which date would work best for you?" />
+
+          <div class="form-field answers"></div>
+        </div>
+      </section>
+    </form>
+  </main>
+</div>
