@@ -1,9 +1,10 @@
 import { Component, inject, OnInit } from "@angular/core";
 import { SurveyService } from "../../services/survey.service";
 import { CreateSurvey } from "../create-survey/create-survey";
+import { RouterLink } from "@angular/router";
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: "app-home",
   styleUrl: "./home.scss",
   templateUrl: "./home.html",

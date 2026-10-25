@@ -1,0 +1,62 @@
+.home {
+  background-color: #35273a;
+  color: #ffb770;
+  padding: 2rem 4.5rem;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "logo logo"
+      "hero illustration";
+  }
+
+  &__logo-wrapper {
+    grid-area: logo;
+    margin-bottom: 2rem;
+  }
+
+  &__hero {
+    grid-area: hero;
+  }
+
+  &__hero-title {
+    font-size: 3.5rem;
+    max-width: 17ch;
+    margin-bottom: 1rem;
+  }
+
+  &__hero-description {
+    font-size: 1.125rem;
+    max-width: 50ch;
+    margin-bottom: 1.5rem;
+  }
+
+  &__hero-link {
+    display: block;
+    max-width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #ffb770;
+    color: black;
+  }
+
+  &__illustration-wrapper {
+    grid-area: illustration;
+  }
+
+  &__illustration {
+    height: 300px;
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 7.5rem;
+    justify-self: center;
+  }
+}
