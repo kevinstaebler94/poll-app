@@ -96,3 +96,18 @@ Beispiel: `ng generate component components/home` und `ng g c components/home` s
 - `ng g i` erstellt eine TypeScript-Interface-Datei. Interfaces benötigen keinen Angular-Decorator.
 - Angular 22 verwendet standardmäßig Standalone Components.
 - Die genaue Dateistruktur hängt von den CLI-Einstellungen ab.
+
+# Supabase – Datenbankfunktionen
+
+| Funktion | Beschreibung |
+| --- | --- |
+| `.from()` | Tabelle auswählen |
+| `.select()` | Datensätze abrufen |
+| `.insert()` | Neue Datensätze erstellen |
+| `.update()` | Datensätze aktualisieren |
+| `.delete()` | Datensätze löschen |
+| `.eq()` | Nach exakter Übereinstimmung filtern |
+| `.gt()` / `.gte()` | Größer als / größer oder gleich |
+| `.lt()` / `.lte()` | Kleiner als / kleiner oder gleich |
+| `.order()` | Ergebnisse sortieren |
+| `.limit()` | Anzahl der Ergebnisse begrenzen |

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
   imports: [],
@@ -6,4 +6,6 @@ import { Component } from "@angular/core";
   styleUrl: "./survey-card.scss",
   templateUrl: "./survey-card.html",
 })
-export class SurveyCard {}
+export class SurveyCard {
+  survey = input.required<any>();
+}

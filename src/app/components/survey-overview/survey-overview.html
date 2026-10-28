@@ -1,16 +1,30 @@
-<section class="survey-overview__ending">
-  <h3>Ending soon surveys</h3>
+<div class="survey-overview__wrapper">
+  <section class="survey-overview__ending">
+    <h3>Ending soon surveys</h3>
 
-  <div class="survey-overview-featured-list"></div>
-</section>
+    <div class="survey-overview__featured-list">
+      @for (survey of surveys; track survey.id) {
+        <app-survey-card [survey]="survey" />
+      }
+    </div>
+  </section>
 
-<section class="home__survey-history">
-  <div class="buttons-container">
-    <button>Active survey</button>
-    <button>Past survey</button>
-  </div>
+  <section class="survey-overview__history">
+    <div class="buttons-container">
+      <button>Active survey</button>
+      <button>Past survey</button>
+    </div>
 
-  <div class="categories">
-    <select name="category" id="category"></select>
-  </div>
-</section>
+    <div class="categories">
+      <select name="category" id="category">
+        <option value="allSurveys">All Surveys</option>
+        <option value="teamActivities">Team Activities</option>
+        <option value="healthAndWellness">Health & Wellness</option>
+        <option value="gamingAndEntertainment">Gaming & Entertainment</option>
+        <option value="educationAndLearning">Education & Learning</option>
+        <option value="lifestyleAndPreferences">Lifestyle & Preferences</option>
+        <option value="technologyAndInnovation">Technology & Innovation</option>
+      </select>
+    </div>
+  </section>
+</div>
