@@ -3,7 +3,7 @@
     <h3 class="survey-overview__title">Ending soon surveys</h3>
 
     <div class="survey-overview__featured-list">
-      @for (survey of surveys; track survey.id) {
+      @for (survey of expiringSurveys(); track survey.id) {
         <app-survey-card [survey]="survey" />
       }
     </div>
@@ -27,4 +27,5 @@
       </select>
     </div>
   </section>
+  <app-survey-details class="survey-overview__details" [surveys]="surveys()"></app-survey-details>
 </div>

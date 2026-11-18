@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, signal } from "@angular/core";
 
 @Component({
   imports: [],
@@ -6,4 +6,6 @@ import { Component } from "@angular/core";
   styleUrl: "./survey-details.scss",
   templateUrl: "./survey-details.html",
 })
-export class SurveyDetails {}
+export class SurveyDetails {
+  readonly selectedTab = signal<"active" | "past">("active");
+}
