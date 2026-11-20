@@ -1,5 +1,6 @@
-.survey-overview {
-  &__details {
-    display: block;
-  }
+.survey-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
 }

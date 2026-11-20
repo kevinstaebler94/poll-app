@@ -1,5 +1,5 @@
-<div class="survey-card">
-  <span class="survey-card__category"></span>
-  <h3 class="survey-card__title"></h3>
-  <span class="survey-card__expire-date"></span>
+<div class="survey-details">
+  @for (survey of surveys(); track survey.id) {
+    <app-survey-card class="survey-card--default" [survey]="survey"></app-survey-card>
+  }
 </div>

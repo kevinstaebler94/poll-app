@@ -1,7 +1,7 @@
 .survey-card {
   background-color: whitesmoke;
   color: black;
-  padding: 2rem;
+  padding: 5rem;
   border: 2px solid rgb(202, 198, 198);
   border-top-right-radius: 100px;
   display: grid;
@@ -15,7 +15,7 @@
   }
 
   &__title {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     padding-bottom: 3rem;
   }
 
@@ -29,5 +29,29 @@
     width: fit-content;
     padding: 0.25rem 0.5rem;
     background-color: #ffd3a8;
+  }
+}
+
+:host(.survey-card--default) {
+  .survey-card {
+    background-color: #423546;
+    padding: 2rem;
+    border: none;
+
+    &__category {
+      font-size: 1.5rem;
+      padding-bottom: 0.75rem;
+      color: #ffcfa1;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+      padding: 1.5rem;
+      color: whitesmoke;
+    }
+
+    &__bottom {
+      justify-content: end;
+    }
   }
 }
