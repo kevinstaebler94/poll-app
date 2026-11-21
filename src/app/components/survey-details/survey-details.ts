@@ -1,4 +1,4 @@
-import { Component, signal, input } from "@angular/core";
+import { Component, input } from "@angular/core";
 import { SurveyCard } from "../survey-card/survey-card";
 
 @Component({
@@ -8,6 +8,5 @@ import { SurveyCard } from "../survey-card/survey-card";
   templateUrl: "./survey-details.html",
 })
 export class SurveyDetails {
-  readonly selectedTab = signal<"active" | "past">("active");
   readonly surveys = input.required<any[]>();
 }

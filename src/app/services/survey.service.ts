@@ -29,6 +29,30 @@ export class SurveyService {
     return data ?? [];
   }
 
+  async getActiveSurveysData() {
+    const { data, error } = await this.supabase
+      .from("surveys")
+      .select("*")
+      .or(`expires_at.is.null,expires_at.gt.${new Date().toISOString()}`)
+      .order("expires_at", { ascending: true });
+
+    if (error) throw error;
+
+    return data ?? [];
+  }
+
+  async getExpiredSurveysData() {
+    const { data, error } = await this.supabase
+      .from("surveys")
+      .select("*")
+      .lte("expires_at", new Date().toISOString())
+      .order("expires_at", { ascending: false });
+
+    if (error) throw error;
+
+    return data ?? [];
+  }
+
   // async getAllQuestionsData() {
   //   const { data, error } = await this.supabase.from("questions").select("*");
 

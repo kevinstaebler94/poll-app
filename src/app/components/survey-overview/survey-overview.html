@@ -11,8 +11,20 @@
 
   <section class="survey-overview__history">
     <div class="buttons-container">
-      <button>Active survey</button>
-      <button>Past survey</button>
+      <button
+        class="buttons-container__button"
+        [class.buttons-container__button-active]
+        (click)="selectedTab.set('active')"
+      >
+        Active survey
+      </button>
+      <button
+        class="buttons-container__button"
+        [class.buttons-container__button-past]
+        (click)="selectedTab.set('past')"
+      >
+        Past survey
+      </button>
     </div>
 
     <div class="categories">
@@ -27,5 +39,7 @@
       </select>
     </div>
   </section>
-  <app-survey-details [surveys]="surveys()"></app-survey-details>
+  <p>selectedTab: {{ selectedTab() }}</p>
+  <p>Displayed Surveys: {{ displayedSurveys().length }}</p>
+  <app-survey-details [surveys]="displayedSurveys()"></app-survey-details>
 </div>
