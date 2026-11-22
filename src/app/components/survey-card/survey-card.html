@@ -4,6 +4,18 @@
     <h3 class="survey-card__title">{{ survey().title }}</h3>
   </section>
   <section class="survey-card__bottom">
-    <p class="survey-card__expiring-date">{{ survey().expires_at }}</p>
+    @let remainingDays = getRemainingDays(survey().expires_at);
+    @if (survey().expires_at !== null) {
+      @if (remainingDays === 0) {
+        <p class="survey-card__expiring-date">Expired</p>
+      } @else {
+        <p class="survey-card__expiring-date">
+          Ends in {{ remainingDays }}
+          {{ remainingDays === 1 ? "Day" : "Days" }}
+        </p>
+      }
+    } @else {
+      <p class="survey-card__expiring-date">No expiration date</p>
+    }
   </section>
 </div>

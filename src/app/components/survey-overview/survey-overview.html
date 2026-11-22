@@ -13,14 +13,14 @@
     <div class="buttons-container">
       <button
         class="buttons-container__button"
-        [class.buttons-container__button-active]
+        [class.buttons-container__button--active]="selectedTab() === 'active'"
         (click)="selectedTab.set('active')"
       >
         Active survey
       </button>
       <button
         class="buttons-container__button"
-        [class.buttons-container__button-past]
+        [class.buttons-container__button--active]="selectedTab() === 'past'"
         (click)="selectedTab.set('past')"
       >
         Past survey
